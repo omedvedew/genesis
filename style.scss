@@ -12,8 +12,10 @@
             font-size: 14px;
         }
         background: linear-gradient(to bottom, rgba(220, 230, 255, 0.8) 30%, rgba(70, 120, 255, 0.8));
-        height: 100vh;
 
+
+
+        // HEADER
         .header {
             display: grid;
             grid-template-columns: auto 15% auto 45% auto 25% auto;
@@ -24,6 +26,7 @@
                 line-height: 50px;
             }
             background: linear-gradient(to bottom, rgb(230, 230, 230), rgb(200, 230, 255));
+            color: rgb(0, 25, 100);
 
             .logo {
                 grid-column-start: 2;
@@ -38,7 +41,6 @@
                 border-right: 1px solid  rgb(170, 200, 225);
                 border-left: 1px solid  rgb(170, 200, 225);
                 text-decoration: none;
-                color: black;
 
                 .logo-img {
                     @media (max-width: 1023px) {
@@ -72,7 +74,7 @@
                     text-decoration: none;
                     font-size: 30px;
                     text-align: center;
-                    color: black;
+                    color: rgb(0, 25, 100);
                     padding-top: 3px;
                     padding-left: 5px;
                 }
@@ -111,7 +113,7 @@
                     line-height: 80px;
                     text-align: center;
                     text-decoration: none;
-                    color: black;
+                    color: rgb(0, 25, 100);
                     border-right: 1px solid  rgb(170, 200, 225);
                 }
                 a:first-child {
@@ -149,6 +151,7 @@
                     font-size: 16px;
                     line-height: 80px;
                     border-right: 1px solid  rgb(170, 200, 225);
+                    color: rgb(0, 25, 100);
                 }
                 button:first-child {
                     border-left: 1px solid  rgb(170, 200, 225);
@@ -156,6 +159,109 @@
                 button:hover {
                     background: linear-gradient(to bottom, rgb(200, 230, 255), rgb(170, 200, 225));
                     border-bottom: 3px solid azure;
+                }
+            }
+        }
+
+
+
+        // MAIN
+        .main {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 300px auto;
+
+            // SLIDER
+            .slider {
+                width: 90%;
+                margin: 0 auto;
+
+                .slick-slide {
+                    margin: 0 20px;
+                }
+
+                .slick-dots li button {
+                    position: absolute;
+                    bottom: 25px;
+                }
+
+                .slick-dots li button:before {
+                    font-size: 12px;
+                    @media (max-width: 750px) {
+                        font-size: 8px;
+                    }
+                }
+
+                .slick-dots li.slick-active button:before {
+                    font-size: 18px;
+                    color: rgb(0, 25, 100);
+                    @media (max-width: 750px) {
+                        font-size: 12px;
+                    }
+                }
+
+                .frst-slide {
+                    @include slideProperty;
+    
+                    .slide-img-1 {
+                        @media (max-width: 750px) {
+                            background-position: center;
+                        }
+                        background-image: url(images/img-1.png);
+                        background-position: right;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        opacity: 0.5;
+                    }
+
+                    .slide-text-1 {
+                        @include slideGrid;
+                    }
+                }
+                .scnd-slide {
+                    @include slideProperty;
+    
+                    .slide-img-2 {
+                        @media (max-width: 750px) {
+                            background-position: center;
+                        }
+                        background-image: url(images/img-2.png);
+                        background-position: right;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+
+                    .slide-text-2 {
+                        @include slideGrid;
+                        h2 {
+                            font-size: 46px;
+                            @media (max-width: 1300px) {
+                                font-size: 36px;
+                            }
+                            @media (max-width: 1023px) {
+                                font-size: 24px;
+                                line-height: 30px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                .thrd-slide {
+                    @include slideProperty;
+    
+                    .slide-img-3 {
+                        @media (max-width: 750px) {
+                            background-position: center;
+                        }
+                        background-image: url(images/img-3.png);
+                        background-position: right;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        opacity: 0.5;
+                    }
+                    .slide-text-3 {
+                        @include slideGrid;
+                    }
                 }
             }
         }
