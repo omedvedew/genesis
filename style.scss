@@ -27,6 +27,9 @@
             }
             background: linear-gradient(to bottom, rgb(230, 230, 230), rgb(200, 230, 255));
             color: rgb(0, 25, 100);
+            position: sticky;
+            top: 0;
+            z-index: 10;
 
             .logo {
                 grid-column-start: 2;

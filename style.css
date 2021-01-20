@@ -19,6 +19,9 @@
   line-height: 80px;
   background: linear-gradient(to bottom, #e6e6e6, #c8e6ff);
   color: #001964;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 @media (max-width: 1023px) {
   * .container .header {
