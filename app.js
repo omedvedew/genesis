@@ -39,3 +39,24 @@ aboutImageContainer.addEventListener("click", function(e) {
     changeImageBtn();
 });
 
+
+// TABS SCRIPT
+
+// def img script
+let defaultTabImage = document.querySelector(".def-tab-img");
+function rotateImage() {
+    defaultTabImage.classList.toggle("def-tab-img-rotated");
+};
+let rotation = setInterval(rotateImage, 1500);
+
+function hideTabImage() {
+    clearInterval(rotation);
+    defaultTabImage.classList.add("def-tab-img-hidden");
+}
+
+
+
+
+
+
+
