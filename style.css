@@ -692,5 +692,31 @@
 * .container .main .features-container .tabs-features-container .default-tab-hidden {
   display: none;
 }
+* .container .main .global-tree-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+}
+* .container .main .global-tree-container .tree-container-title {
+  font-size: 42px;
+  text-align: center;
+  color: azure;
+  margin: 50px 0 50px 0;
+  font-family: "Great Vibes", cursive;
+  margin-bottom: 10px;
+}
+@media (max-width: 1300px) {
+  * .container .main .global-tree-container .tree-container-title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1023px) {
+  * .container .main .global-tree-container .tree-container-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
