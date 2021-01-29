@@ -48,15 +48,33 @@ function rotateImage() {
     defaultTabImage.classList.toggle("def-tab-img-rotated");
 };
 let rotation = setInterval(rotateImage, 1500);
-
+let defaultTab = document.querySelector(".default-tab");
 function hideTabImage() {
     clearInterval(rotation);
-    defaultTabImage.classList.add("def-tab-img-hidden");
+    // defaultTabImage.classList.add("def-tab-img-hidden");
+    defaultTab.classList.add("default-tab-hidden");
 }
 
+// tabs script
+let tabBtns = document.querySelectorAll(".tab-btn");
+let tabFeatures = document.querySelectorAll(".tab-feature");
+let tabContainer = document.querySelector(".features-container");
 
-
-
+tabContainer.addEventListener("click", function(e) {
+    let target = e.target;
+    if (target.classList.contains("tab-btn")) {
+        console.log("target");
+        hideTabImage();
+        tabBtns.forEach((btn, i) => {
+            btn.classList.remove("tab-btn-active");
+            tabFeatures[i].classList.remove("tab-feature-active");
+            if (target === btn) {
+                btn.classList.add("tab-btn-active");
+                tabFeatures[i].classList.add("tab-feature-active");
+            };
+        });
+    };
+});
 
 
 

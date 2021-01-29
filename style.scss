@@ -293,7 +293,7 @@
                         display: grid;
                         grid-template-columns: auto 300px;
                         grid-template-rows: auto;
-                        @media (max-width: 425px) {
+                        @media (max-width: 1023px) {
                             grid-template-columns: auto;
                             grid-template-rows: auto 250px;
                         }
@@ -410,7 +410,7 @@
             // FEATURES
             .features-container {
                 display: grid;
-                grid-template-rows: auto 250px;
+                grid-template-rows: auto auto 250px;
                 grid-template-columns: auto;
                 margin-left: 10%;
                 margin-right: 10%;
@@ -418,10 +418,29 @@
                 padding: 15px;
                 background-color: rgba(220, 230, 255, 0.5);padding: 15px;
                 color: rgb(0, 25, 100);
+                @media (max-width: 425px) {
+                    margin: 0;
+                    grid-template-rows: auto auto 150px;
+                }
+
+                .features-title {
+                    font-size: 36px;
+                    
+                    @media (max-width: 1300px) {
+                        font-size: 36px;
+                    }
+                    @media (max-width: 1023px) {
+                        font-size: 24px;
+                        line-height: 30px;
+                    }
+            
+                    font-family: 'Great Vibes', cursive;
+                    margin-bottom: 10px;
+                }
 
                 .tabs-btn-container {
                     display: grid;
-                    grid-template-columns: auto auto auto auto;
+                    grid-template-columns: 25% 25% 25% 25%;
                     grid-template-rows: auto;
                     padding: 10px;
                     margin-bottom: 15px;
@@ -429,6 +448,25 @@
                     font-weight: bold;
                     text-align: center;
                     line-height: 24px;
+                    align-items: center;
+                    @media (max-width: 425px) {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    .tab-btn {
+                        cursor: pointer;
+                        border-bottom: 3px solid transparent;
+                    }
+
+                    .tab-btn:hover {
+                        color: rgb(70, 100, 100);
+                        border-bottom: 3px solid rgb(70, 100, 100);
+                    }
+
+                    .tab-btn-active {
+                        border-bottom: 3px solid azure;
+                    }
                 }
 
                 .tabs-features-container {
@@ -441,6 +479,10 @@
                         height: 230px;
                         transition: all 2s ease-in-out;
                         transform: rotateY(0deg);
+                        @media (max-width: 425px) {margin: 0;
+                            width: 130px;
+                            height: 130px;
+                        }
                     }
                     .def-tab-img-rotated {
                         transition: all 2s ease-in-out;
@@ -450,6 +492,29 @@
                     .def-tab-img-hidden {
                         visibility: hidden;
                         transition: all 1s;
+                    }
+
+                    .tab-feature {
+                        display: none;
+
+                        .tab-feature-content {
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            grid-template-rows: auto;
+                            justify-items: center;
+                            align-items: center;
+                            @media (max-width: 425px) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    .tab-feature-active {
+                        display: block;
+                    }
+
+                    .default-tab-hidden {
+                        display: none;
                     }
                 }
             }
