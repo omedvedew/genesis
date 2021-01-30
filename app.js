@@ -78,3 +78,23 @@ tabContainer.addEventListener("click", function(e) {
 
 
 
+// MOBILE MENU SCRIPT
+let logoBtn = document.querySelector(".logo");
+let mobileMenu = document.querySelector(".mobile-menu");
+let closeMobileMenuBtn = document.querySelector(".close-mob-menu-btn");
+console.log(mobileMenu);
+function showMobileMenu() {
+    mobileMenu.classList.add("mobile-menu-active");
+    setTimeout(hideMobileMenu, 7000);
+};
+function hideMobileMenu() {
+    mobileMenu.classList.remove("mobile-menu-active");
+};
+logoBtn.addEventListener("click", showMobileMenu);
+closeMobileMenuBtn.addEventListener("click", hideMobileMenu);
+
+
+
+
+
+
