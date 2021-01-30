@@ -550,7 +550,8 @@
   align-items: flex-start;
   background-image: url(images/genealogy.jpg);
   transition: all 1s;
-  transform: scale(2.2);
+  width: 100vh;
+  height: 83.3vh;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -649,6 +650,7 @@
   display: grid;
   justify-items: center;
   align-items: center;
+  padding-bottom: 10px;
 }
 * .container .main .features-container .tabs-features-container .def-tab-img {
   width: 230px;
