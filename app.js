@@ -92,6 +92,7 @@ function hideMobileMenu() {
 };
 logoBtn.addEventListener("click", showMobileMenu);
 closeMobileMenuBtn.addEventListener("click", hideMobileMenu);
+mobileMenu.addEventListener("click", hideMobileMenu);
 
 
 
