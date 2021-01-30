@@ -561,9 +561,8 @@
 }
 @media (max-width: 425px) {
   * .container .main .about-container .about-description .about-row-1 .about-image-container .about-image-active {
-    width: 100vh;
-    height: 83.3vh;
-    margin: auto;
+    width: 48vh;
+    height: 40vh;
   }
 }
 * .container .main .about-container .about-description .about-row-1 .about-image-container-active {
