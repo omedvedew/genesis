@@ -123,7 +123,7 @@
                     <div class="tab-feature">
                         <div class="tab-feature-content">
                             <p>Manage personal information of your relatives by filling in depending fields.</p>
-                            <img src="" alt="">
+                            <img src="images/personal-info.png" alt="">
                         </div>
                     </div>
                     <div class="tab-feature">
@@ -147,9 +147,43 @@
                 <div class="mobile-tree-container">
                     <h2>Sorry, genealogic tree content is unsupported in mobile mode</h2>
                 </div>
+                <div class="profile-modal-container">
+                    <div class="profile-modal-window">
+                        <form action="" class="modal-form">
+                            <div class="profile-dbl-row">
+                                <div class="profile-avatar">
+                                    <img src="images/no-avatar.png" alt="" height="75px">
+                                </div>                            
+                                <div class="profile-image-upload">
+                                    <input type="file" class="profile-image-input" id="profile-image-input">
+                                    <label for="profile-image-input" class="profile-image-label">select file</label>Upload profile avatar image
+                                </div>
+                            </div>
+                            <div class="profile-row">
+                                <input type="text" class="profile-surname-input" placeholder="Enter surname">
+                            </div>
+                            <div class="profile-dbl-row">
+                                <input type="text" class="profile-frst-name-input" placeholder="Enter First-name">
+                                <input type="text" class="profile-scnd-name-input" placeholder="Enter Second-name">
+                            </div>
+                            <div class="profile-dbl-row">
+                                <input type="text" class="profile-dob-input" placeholder="Enter date of birth">
+                                <input type="text" class="profile-dod-input" placeholder="Enter date of death (is not required)">
+                            </div>
+                            <div class="profile-row">
+                                <textarea name="biography" cols="30" rows="10" placeholder="Enter importatnt biographic aspects"></textarea>
+                            </div>
+                            <div class="profile-dbl-row">
+                                <button class="profile-submit-btn">submit</button>
+                                <button class="profile-cancel-btn">cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 <div class="tree-container">
                     <div class="files-container">
 
+                        <!-- ANCESTOR LINE 1 -->
                         <div class="ancestor-line-1">
 
                             <div class="person">
@@ -172,6 +206,7 @@
 
                         </div>
 
+                        <!-- SIBLINGS -->
                         <div class="siblings">
 
                             <div class="person">
@@ -182,9 +217,43 @@
                                     John Johnson
                                 </div>
                             </div>
+
                         </div>
 
+                        <!-- CHILDREN LINE 1 -->
+
                         <div class="children-line-1">
+
+                            <div class="person">
+                                <div class="person-avatar">
+                                    <img src="images/no-avatar.png" alt="" height="75px">
+                                </div>
+                                <div class="person-name">
+                                    Charles Christopher Johnson
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- CHILDREN LINE 2 -->
+                        <div class="children-line-2">
+
+                            <div class="person">
+                                <div class="person-avatar">
+                                    <img src="images/no-avatar.png" alt="" height="75px">
+                                </div>
+                                <div class="person-name">
+                                    John Ormsby Johnson
+                                </div>
+                            </div>
+                            <div class="person">
+                                <div class="person-avatar">
+                                    <img src="images/no-avatar.png" alt="" height="75px">
+                                </div>
+                                <div class="person-name">
+                                    Charles Turquand Johnson
+                                </div>
+                            </div>
 
                         </div>
 

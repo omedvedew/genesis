@@ -749,8 +749,13 @@
   }
 }
 * .container .main .features-container .tabs-features-container .tab-feature .tab-feature-content img {
-  max-width: 90%;
-  max-height: 90%;
+  margin-left: 15px;
+  max-height: 230px;
+}
+@media (max-width: 425px) {
+  * .container .main .features-container .tabs-features-container .tab-feature .tab-feature-content img {
+    max-height: 130px;
+  }
 }
 * .container .main .features-container .tabs-features-container .tab-feature-active {
   display: block;
@@ -797,6 +802,117 @@
     line-height: 30px;
   }
 }
+* .container .main .global-tree-container .profile-modal-container {
+  display: none;
+  grid-template-columns: 500px;
+  grid-template-rows: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  background: linear-gradient(to bottom, #e6e6e6, #c8e6ff);
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto auto auto;
+  padding: 15px;
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form .profile-row {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form .profile-dbl-row {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form .profile-avatar {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 100px;
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form .profile-image-upload {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto;
+  font-size: 11px;
+  align-items: center;
+  color: #001964;
+  padding-right: 15px;
+  text-align: center;
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form .profile-image-upload .profile-image-input {
+  display: none;
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form .profile-image-upload .profile-image-label {
+  margin: 10px;
+  height: 30px;
+  background: linear-gradient(to bottom, #e6e6e6, #c8e6ff);
+  border: 2px solid #96b4cd;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  line-height: 16px;
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form .profile-image-upload .profile-image-label:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom, #c8e6ff, #aac8e1);
+  border-bottom: 2px solid azure;
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form input, * .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form textarea {
+  background: transparent;
+  background-color: rgba(240, 250, 255, 0.8);
+  border: 2px solid #96b4cd;
+  border-radius: 5px;
+  margin: 5px 5px 15px 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #001964;
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form input:focus, * .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form textarea:focus {
+  outline: none;
+  border: 2px solid rgba(0, 25, 100, 0.8);
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form .profile-submit-btn, * .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form .profile-cancel-btn {
+  margin: 10px;
+  height: 30px;
+  background: linear-gradient(to bottom, #e6e6e6, #c8e6ff);
+  border: 2px solid #96b4cd;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  color: #001964;
+  text-align: center;
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form .profile-submit-btn:hover, * .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form .profile-cancel-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom, #c8e6ff, #aac8e1);
+  border-bottom: 2px solid azure;
+}
+* .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form .profile-submit-btn:focus, * .container .main .global-tree-container .profile-modal-container .profile-modal-window .modal-form .profile-cancel-btn:focus {
+  outline: none;
+}
+* .container .main .global-tree-container .pmc-active {
+  display: grid;
+}
 * .container .main .global-tree-container .tree-container {
   display: none;
 }
@@ -837,13 +953,7 @@
     min-height: 200px;
     padding-bottom: 50px;
   }
-  * .container .main .global-tree-container .tree-container .files-container .ancestor-line-1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  * .container .main .global-tree-container .tree-container .files-container .siblings {
+  * .container .main .global-tree-container .tree-container .files-container .ancestor-line-1, * .container .main .global-tree-container .tree-container .files-container .siblings, * .container .main .global-tree-container .tree-container .files-container .children-line-1, * .container .main .global-tree-container .tree-container .files-container .children-line-2 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -852,7 +962,7 @@
   * .container .main .global-tree-container .tree-container .files-container .person {
     display: grid;
     grid-template-columns: 100px;
-    grid-template-rows: auto 30px;
+    grid-template-rows: auto 35px;
     justify-items: center;
     align-items: center;
     border: 3px solid azure;

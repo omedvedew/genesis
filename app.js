@@ -63,7 +63,6 @@ let tabContainer = document.querySelector(".features-container");
 tabContainer.addEventListener("click", function(e) {
     let target = e.target;
     if (target.classList.contains("tab-btn")) {
-        console.log("target");
         hideTabImage();
         tabBtns.forEach((btn, i) => {
             btn.classList.remove("tab-btn-active");
@@ -94,6 +93,29 @@ logoBtn.addEventListener("click", showMobileMenu);
 closeMobileMenuBtn.addEventListener("click", hideMobileMenu);
 mobileMenu.addEventListener("click", hideMobileMenu);
 
+// TREE MODAL "ADD FAMILY MEMEVER" SCRIPT
+let afmModal = document.querySelector(".profile-modal-container");
+let afmModalWindow = document.querySelector(".profile-modal-window");
+let afmButton = document.querySelector(".add-family-member-btn");
+let afmSubmitBtn = document.querySelector(".profile-submit-btn");
+let afmCancelBtn = document.querySelector(".profile-cancel-btn");
+
+function showAFMModal() {
+    afmModal.classList.add("pmc-active");
+};
+function hideAFMModal() {
+    afmModal.classList.remove("pmc-active");
+};
+
+afmButton.addEventListener("click", showAFMModal);
+afmSubmitBtn.addEventListener("click", hideAFMModal);
+afmCancelBtn.addEventListener("click", hideAFMModal);
+afmModal.addEventListener("click", function(e) {
+    let target = e.target;
+    if (target === afmModal) {
+        hideAFMModal();
+    };
+});
 
 
 
