@@ -119,5 +119,27 @@ afmModal.addEventListener("click", function(e) {
 
 
 
+// PROFILE INFO MODAL SCRIPT
+let infoModal = document.querySelector(".profile-info-modal");
+let infoModalCloseBtn = document.querySelector(".profile-info-close-btn");
+let personBtn = document.querySelectorAll(".person");
+
+function showInfoModal() {
+    infoModal.classList.add("profile-info-modal-active");
+    console.log(personBtn);
+};
+function hideInfoModal() {
+    infoModal.classList.remove("profile-info-modal-active");
+};
+
+personBtn.forEach((btn) => {
+    btn.addEventListener("click", function() {
+        console.log(btn.lastElementChild.textContent);
+    });
+});
+infoModalCloseBtn.addEventListener("click", hideInfoModal);
+
+
+
 
 
