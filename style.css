@@ -990,5 +990,70 @@
     box-shadow: 0px 0px 10px 5px rgba(220, 230, 255, 0.8);
   }
 }
+* .container .main .global-tree-container .profile-info-modal {
+  display: grid;
+  width: 400px;
+  grid-template-columns: auto;
+  grid-template-rows: 300px auto auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 15px;
+  border-radius: 5px;
+}
+* .container .main .global-tree-container .profile-info-modal .profile-info-inner-row {
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: auto;
+}
+* .container .main .global-tree-container .profile-info-modal .profile-info-inner-row .profile-info-avatar {
+  display: grid;
+}
+* .container .main .global-tree-container .profile-info-modal .profile-info-inner-row .profile-info-avatar img {
+  display: block;
+  max-height: 300px;
+  max-width: 200px;
+}
+* .container .main .global-tree-container .profile-info-modal .profile-info-inner-row .profile-info-inner-col {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 50px 50px 50px;
+  align-items: center;
+}
+* .container .main .global-tree-container .profile-info-modal .profile-info-inner-row .profile-info-inner-col .profile-info-dod {
+  display: grid;
+  grid-template-columns: 30px auto;
+  justify-items: left;
+  line-height: 32px;
+}
+* .container .main .global-tree-container .profile-info-modal .profile-info-inner-row .profile-info-inner-col .profile-info-dod .info-dod-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(images/cross.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+* .container .main .global-tree-container .profile-info-modal .profile-info-bio {
+  font-size: 14px;
+  line-height: 21px;
+}
+* .container .main .global-tree-container .profile-info-modal .profile-info-close-btn {
+  margin-top: 20px;
+  display: block;
+  width: 60px;
+  height: 30px;
+  border: 2px solid #96b4cd;
+  background-color: linear-gradient(to bottom, #e6e6e6, #c8e6ff);
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  justify-self: right;
+}
+* .container .main .global-tree-container .profile-info-modal .profile-info-close-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom, #c8e6ff, #aac8e1);
+  border-bottom: 2px solid azure;
+}
 
 /*# sourceMappingURL=style.css.map */
