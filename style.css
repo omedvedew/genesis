@@ -994,7 +994,7 @@
   display: grid;
   width: 400px;
   grid-template-columns: auto;
-  grid-template-rows: 300px auto auto;
+  grid-template-rows: 250px auto auto;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 15px;
   border-radius: 5px;
@@ -1009,7 +1009,7 @@
 }
 * .container .main .global-tree-container .profile-info-modal .profile-info-inner-row .profile-info-avatar img {
   display: block;
-  max-height: 300px;
+  max-height: 250px;
   max-width: 200px;
 }
 * .container .main .global-tree-container .profile-info-modal .profile-info-inner-row .profile-info-inner-col {
