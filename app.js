@@ -134,7 +134,31 @@ function hideInfoModal() {
 
 personBtn.forEach((btn) => {
     btn.addEventListener("click", function() {
-        console.log(btn.lastElementChild.textContent);
+        let personArray = btn.children;
+        console.log(personArray);
+        let profileAvatar = personArray[0].firstElementChild.getAttribute("src");
+        let profileName = personArray[1].textContent;
+        let profileDoB = personArray[2].textContent;
+        let profileDoD = personArray[3].textContent;
+        let profileBio = personArray[4].textContent; 
+        console.log(profileAvatar);
+
+        let profileInfoAvatar = document.querySelector(".profile-info-avatar").firstElementChild;
+        profileInfoAvatar.setAttribute("src", profileAvatar);
+
+        let profileInfoName = document.querySelector(".info-name-content");
+        profileInfoName.textContent = profileName;
+
+        let profileInfoDoB = document.querySelector(".info-dob-content");
+        profileInfoDoB.textContent = profileDoB;
+
+        let profileInfoDoD = document.querySelector(".info-dod-content");
+        profileInfoDoD.textContent = profileDoD;
+
+        let profileInfoBio = document.querySelector(".profile-info-bio");
+        profileInfoBio.textContent = profileBio;
+        
+        showInfoModal();
     });
 });
 infoModalCloseBtn.addEventListener("click", hideInfoModal);

@@ -835,6 +835,10 @@
                                     color: azure;
                                     text-align: center;
                                 }
+
+                                .person-dob, .person-dod, .person-bio {
+                                    display: none;
+                                }
                             }
 
                             .person:hover {
@@ -870,8 +874,8 @@
 
                             img {
                                 display: block;
-                                max-height: 250px;
-                                max-width: 200px;
+                                max-height: 230px;
+                                max-width: 180px;
                             }
                         }
 
@@ -914,8 +918,12 @@
                     }
 
                     .profile-info-bio {
+                        display: grid;
+                        grid-template-columns: auto;
+                        grid-template-rows: 170px;
                         font-size: 14px;
                         line-height: 21px;
+                        overflow-y: scroll;
                     }
 
                     .profile-info-close-btn {

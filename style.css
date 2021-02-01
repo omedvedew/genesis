@@ -985,6 +985,9 @@
     color: azure;
     text-align: center;
   }
+  * .container .main .global-tree-container .tree-container .files-container .person .person-dob, * .container .main .global-tree-container .tree-container .files-container .person .person-dod, * .container .main .global-tree-container .tree-container .files-container .person .person-bio {
+    display: none;
+  }
   * .container .main .global-tree-container .tree-container .files-container .person:hover {
     cursor: pointer;
     box-shadow: 0px 0px 10px 5px rgba(220, 230, 255, 0.8);
@@ -1015,8 +1018,8 @@
 }
 * .container .main .global-tree-container .profile-info-modal .profile-info-inner-row .profile-info-avatar img {
   display: block;
-  max-height: 250px;
-  max-width: 200px;
+  max-height: 230px;
+  max-width: 180px;
 }
 * .container .main .global-tree-container .profile-info-modal .profile-info-inner-row .profile-info-inner-col {
   display: grid;
@@ -1050,8 +1053,12 @@
   background-size: contain;
 }
 * .container .main .global-tree-container .profile-info-modal .profile-info-bio {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 170px;
   font-size: 14px;
   line-height: 21px;
+  overflow-y: scroll;
 }
 * .container .main .global-tree-container .profile-info-modal .profile-info-close-btn {
   margin-top: 20px;
